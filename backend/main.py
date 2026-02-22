@@ -3,10 +3,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from db.database import engine, Base
 from models.user import User
+from backend.api import users
+
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
+app.include_router(users.router)
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,3 +28,4 @@ def health():
 @app.get("/")
 def root():
     return {"status": "Backend is running 🚀"}
+
