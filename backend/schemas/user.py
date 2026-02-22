@@ -1,4 +1,4 @@
-from pydanit mergetic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field
 
 
 class UserCreate(BaseModel):
