@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from db.database import engine, Base
-from models.user import User
+from backend.db.database import engine, Base
 from backend.api import users
 
 
