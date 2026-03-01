@@ -14,17 +14,56 @@
 ### Backend:
 - Python
 - FastAPI
-- PostgreSQL (планируется)
-- SQLAlchemy (планируется)
+- PostgreSQL
+- SQLAlchemy 
+- Pydantic
+- Passlib
+- Uvicorn
 
 ### Frontend:
 - React (Vite)
 - Axios
 - Bootstrap
 
+## ✅ Реализовано
+
+- Подключение к PostgreSQL
+- Модель пользователя (User)
+- Регистрация пользователя
+- Хеширование паролей
+- Проверка уникальности email
+- REST endpoint /users/register
+- Swagger документация (/docs)
+
+## 📍 Roadmap
+
+### Этап 1 — Базовая инфраструктура (завершено)
+
+- Настройка FastAPI
+- Подключение PostgreSQL
+- Реализация регистрации
+
+### Этап 2 — Аутентификация
+
+- JWT авторизация
+- Login endpoint
+- Защищённые маршруты
+
+### Этап 3 — Работа с файлами
+
+- Загрузка файлов
+- Хранение
+- Генерация QR-кода
+
 ## 📦 Архитектура проекта
 
 Frontend и backend разделены и взаимодействуют через REST API.
+
+## 🔌 API (на текущий момент)
+
+- Метод | ----- | POST
+- Endpoint | ----- | POST/users/register	
+- Описание | ----- |  Регистрация пользователя
 
 ## ⚙️ Запуск проекта локально
 
@@ -32,7 +71,7 @@ Frontend и backend разделены и взаимодействуют чер�
 ```bash
 cd backend
 venv\Scripts\activate
-uvicorn main:app --reload
+uvicorn backend.main:app --reload
 
 cd frontend
 npm install
